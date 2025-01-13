@@ -1,0 +1,5 @@
+perl filter_rows_with_zeros.pl
+cat rows_with_zeros.txt |cut -f1 > nonzero_rows_og
+ln -s nonzero_rows_og private_OG
+perl stat.pl nonzero_rows_og Orthogroups.tsv > nonzero_rows_og_Orthogroups.tsv
+
