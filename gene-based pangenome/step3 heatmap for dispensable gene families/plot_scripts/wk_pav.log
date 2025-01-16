@@ -1,7 +1,0 @@
-perl stat_1.pl core_OG Orthogroups.GeneCount.tsv |cut -f1-19 > core_count.txt
- perl stat_1.pl dispensiable_OG Orthogroups.GeneCount.tsv |cut -f1-19  > dispensiable_count.txt
- perl stat_1.pl softcore_OG Orthogroups.GeneCount.tsv |cut -f1-19  > soft_core_count.txt
-cat core_count.txt soft_core_count.txt dispensiable_count.txt > all_pan_stat_pav.txt
-perl stat_num_to_1.pl
-
-
