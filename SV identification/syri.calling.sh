@@ -10,5 +10,7 @@ query_genome=Wheat_${query}.${chr}.fa
 delta=/nucmer/${pref2}.i90.l200.1filter.delta
 coords=/nucmer/${pref2}.i90.l200.1filter.syri.coords
 syri -c ${coords} -d ${delta} -r ${ref_genome} -q ${query_genome} --nosnp --prefix ${pref2}.i90.l200
+delta-filter -m -i 90 -l 100 out.delta > out.filtered.delta     # Remove small and lower quality alignments
+show-coords -THrd out.filtered.delta > out.filtered.coords      # Convert alignment information to a .TSV format as required by SyRI, -THrd is required.
 done
 done
